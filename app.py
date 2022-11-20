@@ -2,10 +2,11 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pickle
+import joblib
 
 # Load model dengan pickle
-model = pickle.load(open("mymodel.sav", "rb"))
+# model = pickle.load(open("mymodel.sav", "rb"))
+model = joblib.load("newmodel.sav")
 
 # Display title webpage
 st.title("Apakah Webpage Efektif :money_with_wings:")
